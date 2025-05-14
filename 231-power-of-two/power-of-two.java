@@ -1,17 +1,11 @@
 class Solution {
-
-    boolean power(int n)
+    boolean sqrt(int n)
     {
-        if(n<=0)
-        {
-            return false;
-        }
-        else
-        {
-            return (n & (n - 1)) == 0;
-        }
+        if (n == 1) return true;
+        if (n <= 0 || n % 2 != 0) return false;
+        return sqrt(n / 2);
     }
     public boolean isPowerOfTwo(int n) {
-        return power(n);
+        return sqrt(n);
     }
 }
