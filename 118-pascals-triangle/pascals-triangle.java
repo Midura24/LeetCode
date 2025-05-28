@@ -11,15 +11,14 @@ class Solution {
 
     List<Integer> operation(int row)
     {
-        long num=1;
+        int num=1;
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
         for(int col=1;col<row;col++)
         {
             num=num*(row-col);
             num=num/(col);
-            int ans=(int)num;
-            temp.add(ans);
+            temp.add(num);
         }
         return temp;
     }
